@@ -1,4 +1,4 @@
-package com.festivolo.core.model;
+package com.festivolo.core;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import java.util.List;
  * @author adrilojea
  *
  */
-public class Artista extends Usuario {
+public class Artista {
 
 	private String nombre;
 	private Direccion direccion;

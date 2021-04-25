@@ -1,4 +1,4 @@
-package com.festivolo.core.model;
+package com.festivolo.core;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,7 @@ public class Integrante {
 	private String rol;
 	private LocalDate fechaNacimiento;
 	private String biografia;
-	
+
 	public Integrante() {
 		super();
 	}
@@ -43,5 +43,5 @@ public class Integrante {
 	public void setBiografia(String biografia) {
 		this.biografia = biografia;
 	}
-	
+
 }

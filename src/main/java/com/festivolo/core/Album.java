@@ -1,4 +1,4 @@
-package com.festivolo.core.model;
+package com.festivolo.core;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,7 +8,7 @@ public class Album {
 	private List<GeneroMusical> generos;
 	private LocalDate fechaPublicacion;
 	private String notas;
-	
+
 	public Album() {
 		super();
 	}
@@ -44,5 +44,5 @@ public class Album {
 	public void setNotas(String notas) {
 		this.notas = notas;
 	}
-	
+
 }

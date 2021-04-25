@@ -1,4 +1,4 @@
-package com.festivolo.core.model;
+package com.festivolo.core;
 
 /**
  * @author adrilojea
