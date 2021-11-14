@@ -1,10 +1,14 @@
-package com.festivolo.core;
+package com.festivolo.core.service.model;
 
 import java.time.LocalDate;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
+
+@EntityScan
 public class Usuario {
 
-	private int id;
+	private @Id int id;
 	private String usuario;
 	private String email;
 	private String password;

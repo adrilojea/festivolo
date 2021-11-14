@@ -1,4 +1,4 @@
-package com.festivolo.core;
+package com.festivolo.core.service.model;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,38 +1,60 @@
-package com.festivolo.core;
+package com.festivolo.core.repository.model;
 
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  * @author adrilojea
  *
  */
+@Entity
+@Table(name = "artista", schema = "public")
 public class Artista {
 
+	@Id
+	private int artistaId;
+	@Column
 	private String nombre;
+	@OneToOne
 	private Direccion direccion;
+	@Column
 	private Integer numSeguidores;
-	private GeneroMusical genero;
-	private List<Integrante> integrantes;
-	private List<Album> albunes;
+	@Column
+	private Integer genero;
+	@Column
 	private String biografia;
+	@Column
 	private String web;
+	@Column
+	private String email;
 
 	public Artista() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Artista(String nombre, Direccion direccion, Integer numSeguidores, GeneroMusical genero,
-			List<Integrante> integrantes, List<Album> albunes, String biografia, String web) {
+	public Artista(int artistaId, String nombre, Direccion direccion, Integer numSeguidores, Integer genero,
+			String biografia, String web, String email) {
 		super();
+		this.artistaId = artistaId;
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.numSeguidores = numSeguidores;
 		this.genero = genero;
-		this.integrantes = integrantes;
-		this.albunes = albunes;
 		this.biografia = biografia;
 		this.web = web;
+		this.email = email;
+	}
+
+	public int getArtistaId() {
+		return artistaId;
+	}
+
+	public void setArtistaId(int artistaId) {
+		this.artistaId = artistaId;
 	}
 
 	public String getNombre() {
@@ -59,28 +81,12 @@ public class Artista {
 		this.numSeguidores = numSeguidores;
 	}
 
-	public GeneroMusical getGenero() {
+	public Integer getGenero() {
 		return genero;
 	}
 
-	public void setGenero(GeneroMusical genero) {
+	public void setGenero(Integer genero) {
 		this.genero = genero;
-	}
-
-	public List<Integrante> getIntegrantes() {
-		return integrantes;
-	}
-
-	public void setIntegrantes(List<Integrante> integrantes) {
-		this.integrantes = integrantes;
-	}
-
-	public List<Album> getAlbunes() {
-		return albunes;
-	}
-
-	public void setAlbunes(List<Album> albunes) {
-		this.albunes = albunes;
 	}
 
 	public String getBiografia() {
@@ -98,4 +104,13 @@ public class Artista {
 	public void setWeb(String web) {
 		this.web = web;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 }

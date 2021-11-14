@@ -1,4 +1,4 @@
-package com.festivolo.core;
+package com.festivolo.core.service.model;
 
 /**
  * @author adrilojea
@@ -11,7 +11,13 @@ public class Direccion {
 
 	public Direccion() {
 		super();
-		// TODO Auto-generated constructor stub
+	}
+
+	public Direccion(String ciudad, String provincia, String pais) {
+		super();
+		this.ciudad = ciudad;
+		this.provincia = provincia;
+		this.pais = pais;
 	}
 
 	public String getCiudad() {
